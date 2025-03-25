@@ -6,8 +6,6 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
 from account.serializers import LoginSerializer, SignupSerializer
 from account.models import BlacklistToken
-
-
 class ProtectedView(viewsets.GenericViewSet):
 
     @action(methods=["get"], detail=False, permission_classes=[IsAuthenticated])
